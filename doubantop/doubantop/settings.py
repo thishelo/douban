@@ -28,13 +28,13 @@ USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-#DOWNLOAD_DELAY = 3
+DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
 
 # Disable cookies (enabled by default)
-#COOKIES_ENABLED = False
+COOKIES_ENABLED = False
 
 # Disable Telnet Console (enabled by default)
 #TELNETCONSOLE_ENABLED = False
@@ -70,11 +70,17 @@ ITEM_PIPELINES = {
 }
 
 
-#MONGODB
+# MONGODB 主机名
 MONGODB_HOST = "127.0.0.1"
+
+# MONGODB 端口号
 MONGODB_PORT = 27017
-MONGO_NAME = "DONBAN"
-MONGODB_SHEETNAME = "doubanfilms"
+
+# 数据库名称
+MONGODB_DBNAME = "Douban"
+
+# 存放数据的表名称
+MONGODB_SHEETNAME = "doubanmovies"
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
