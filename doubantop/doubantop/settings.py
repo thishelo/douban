@@ -16,10 +16,11 @@ NEWSPIDER_MODULE = 'doubantop.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'doubantop (+http://www.yourdomain.com)'
+USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1"
+
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+#ROBOTSTXT_OBEY = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
@@ -64,9 +65,16 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'doubantop.pipelines.DoubantopPipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'doubantop.pipelines.DoubantopPipeline': 300,
+}
+
+
+#MONGODB
+MONGODB_HOST = "127.0.0.1"
+MONGODB_PORT = 27017
+MONGO_NAME = "DONBAN"
+MONGODB_SHEETNAME = "doubanfilms"
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://doc.scrapy.org/en/latest/topics/autothrottle.html
